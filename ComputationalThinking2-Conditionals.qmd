@@ -1,5 +1,6 @@
 ---
 title: "Computational Thinking 2 - Conditionals"
+author: "Alex Stadlinger & Ellie Kuskie"
 format: pdf
 editor: visual
 ---
@@ -285,21 +286,19 @@ We are going to try to arbitrarily classify whether a flower is "big" or small" 
 ## Q2.3
 
 ```{r}
-#select the sepal length column to use
-for (Sepal.Length in colnames(iris)) {
-  #assign this column to a vector
-  sepal_length <- iris[[Sepal.Length]]
-  #iterate through length of vector
-  for (i in 1:20) {
+#assign this column to a vector      
+sepal_length <- iris$Sepal.Length
+
+for (i in 1:20) {
     #determine if flower is big
-    if (sepal_length[i] >= 6) {
+    if (sepal_length[i] >= 5.5) {
       print("flower is big")
       #determine is flower is small
   } else {
       print("flower is small")
     }
-  }
 }
+
 
 #Ouput is REALLY long, so we will not iterate through the whole vector. We will only do the first 20.  
 ```
